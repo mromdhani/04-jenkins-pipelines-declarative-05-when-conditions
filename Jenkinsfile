@@ -11,7 +11,7 @@ pipeline {
                // branch 'origin/production'  does not work. it is replaced b the folowing expression 
                // See https://issues.jenkins-ci.org/browse/JENKINS-43104?page=com.atlassian.jira.plugin.system.issuetabpanels%3Aall-tabpanel
                 expression {
-                  return env.GIT_BRANCH == "origin/master"
+                  return env.GIT_BRANCH == "origin/main"
                 }
                 anyOf {
                     environment name: 'DEPLOY_TO', value: 'production'
