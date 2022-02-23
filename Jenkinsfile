@@ -13,10 +13,7 @@ pipeline {
                 expression {
                   return env.GIT_BRANCH == "origin/main"
                 }
-                anyOf {
-                    environment name: 'DEPLOY_TO', value: 'production'
-                    environment name: 'DEPLOY_TO', value: 'staging'
-                }
+               
             }
             steps {
                 echo 'Deploying'
